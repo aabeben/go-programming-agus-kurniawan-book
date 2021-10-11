@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main(){
-	var str string = "Hello"
-	var n, m int = 1, 2
-	var mn , _ float32 = 1.5, 4.5
-
-	fmt.Printf("value: %v, type: %T\n",str, str)
-	fmt.Printf("value: %v, type: %T\n",n,n)
-	fmt.Printf("value: %v, type: %T\n",m, m)
-	fmt.Printf("value: %v, type: %T\n", mn, mn)
+	var str string =  "Hello world"
+	var n = 10
+	var m = 50
+	var mn = 2.45
+	fmt.Printf("%v\n", str)
+	fmt.Printf("%v\n", n)
+	fmt.Printf("%v\n", m)
+	fmt.Printf("%v\n", mn)
 }
