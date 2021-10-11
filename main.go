@@ -1,5 +1,6 @@
 package main
 
+
 import "fmt"
 
 
@@ -8,7 +9,11 @@ func main(){
 		a = 5
 		b = 8
 	)
-	fmt.Println(a>b && a!=b)
-	fmt.Println(!(a>=b))
-	fmt.Println(a==b || a>b)
+
+	if a>b || a-b<a {
+		fmt.Println("conditional --> a>b || a-b < a")
+
+	} else {
+		fmt.Println("...another")
+	}
 }
