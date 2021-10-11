@@ -1,22 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func main(){
-	// declare variables
+func main() {
+	fmt.Printf("%v\n", "Circle Area Calculation")
+	fmt.Print("Enter a radius value: ")
+	var radius float64
+	fmt.Scanf("%f", &radius)
 
-	var a = 14
-
-	// increment
-	fmt.Printf("a = %d\n", a)
-	a = a + 1
-	fmt.Printf("a + 1 = %d\n", a)
-	a++
-	fmt.Printf("a++ = %d\n", a)
-
-	// decrement
-	a = a - 1
-	fmt.Printf("a - 1 = %d\n", a)
-	a--
-	fmt.Printf("a-- = %d\n", a)
+	area := math.Pi * math.Pow(radius, 2)
+	fmt.Printf("Circle area with radius %.2f = %.2f \n", radius, area)
 }
