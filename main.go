@@ -4,17 +4,24 @@ import "fmt"
 
 func main(){
 	// declare variables
-	var str string
-	var n, m int
-	var mn float32
+	var a, b int
 
-	// assign variable
-	str = "Hello world!"
-	n, m = 10, 50
-	mn = 2.45
+	// assign variables
+	a, b = 5, 10
 
-	/* Print the result */
-	fmt.Printf("value of str: %v\n", str)
-	fmt.Printf("value of m: %v, n: %v\n", m, n)
-	fmt.Printf("value of mn: %v\n", mn)
+	// arithmetic operation
+	c:=a+b
+	fmt.Printf("%v + %v = %v\n", a, b, c)
+
+	// subtraction
+	d:=a-b
+	fmt.Printf("%v - %v = %v\n", a, b, d)
+
+	// division
+	e:=float32(a) / float32(b)
+	fmt.Printf("%v / %v = %v\n", a, b, e)
+
+	// multiplication
+	f:=a*b
+	fmt.Printf("%v * %v = %v\n", a, b, f)
 }
