@@ -1,27 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func main(){
-	// declare variables
-	var a, b int
+func main() {
+	a := 2.4
+	b := 1.6
 
-	// assign variables
-	a, b = 5, 10
+	c := math.Pow(a, 2)
+	fmt.Printf("%.2f^%d = %.2f \n", a, 2, c)
 
-	// arithmetic operation
-	c:=a+b
-	fmt.Printf("%v + %v = %v\n", a, b, c)
+	c = math.Sin(a)
+	fmt.Printf("Sin(%.2f) = %.2f \n", a, c)
 
-	// subtraction
-	d:=a-b
-	fmt.Printf("%v - %v = %v\n", a, b, d)
-
-	// division
-	e:=float32(a) / float32(b)
-	fmt.Printf("%v / %v = %v\n", a, b, e)
-
-	// multiplication
-	f:=a*b
-	fmt.Printf("%v * %v = %v\n", a, b, f)
+	c = math.Sqrt(a*b)
+	fmt.Printf("Sqrt(%.2f*%.2f) = %.2f \n", a, b, c)
 }
