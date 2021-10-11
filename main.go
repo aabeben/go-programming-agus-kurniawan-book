@@ -1,20 +1,22 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
-func main() {
-	a := 2.4
-	b := 1.6
+func main(){
+	// declare variables
 
-	c := math.Pow(a, 2)
-	fmt.Printf("%.2f^%d = %.2f \n", a, 2, c)
+	var a = 14
 
-	c = math.Sin(a)
-	fmt.Printf("Sin(%.2f) = %.2f \n", a, c)
+	// increment
+	fmt.Printf("a = %d\n", a)
+	a = a + 1
+	fmt.Printf("a + 1 = %d\n", a)
+	a++
+	fmt.Printf("a++ = %d\n", a)
 
-	c = math.Sqrt(a*b)
-	fmt.Printf("Sqrt(%.2f*%.2f) = %.2f \n", a, b, c)
+	// decrement
+	a = a - 1
+	fmt.Printf("a - 1 = %d\n", a)
+	a--
+	fmt.Printf("a-- = %d\n", a)
 }
