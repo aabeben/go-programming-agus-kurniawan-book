@@ -1,19 +1,20 @@
 package main
 
-
 import "fmt"
 
-
 func main(){
-	var (
-		a = 5
-		b = 8
-	)
+	selected:=2
 
-	if a>b || a-b<a {
-		fmt.Println("conditional --> a>b || a-b < a")
-
-	} else {
-		fmt.Println("...another")
+	switch selected {
+	case 0:
+		fmt.Println("selected: 0")
+	case 1:
+		fmt.Println("selected: 1")
+	case 2:
+		fmt.Println("selected: 2")
+	case 3:
+		fmt.Println("selected: 3")
+	default:
+		fmt.Println("other...")
 	}
 }
