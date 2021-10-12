@@ -6,36 +6,35 @@ import (
 )
 
 func main() {
-	// define array
-	fmt.Println("define array")
-	var numbers [5]int
-	var cities [5]string
-	var matrix [3][3]int // array 2D
+	// define slice
+	fmt.Println("define slices")
+	var numbers []int
+	numbers = make([]int, 5)
+	matrix := make([][]int, 3*3)
 
 	// insert data
-	fmt.Println(">>>>>insert array data")
+	fmt.Println(">>>>>insert slice data")
 	for i := 0; i < 5; i++ {
-		numbers[i] = i
-		cities[i] = fmt.Sprintf("City %d", i)
+		     numbers[i] =rand.Intn(100) 
 	}
-	// insert matrix data
-	fmt.Println(">>>>>>insert matrix data")
-	for i := 0; i < 3; i++ {
+	 
+	
+	
+	for i:=0;i<3;i++{
+		matrix[i] = make([]int,3)
 		for j := 0; j < 3; j++ {
 			matrix[i][j] = rand.Intn(100)
 		}
-	}
+	}	
 	// display data
-	fmt.Println(">>>>>>display array data")
-	for j := 0; j < 5; j++ {
-		fmt.Printf("number[%d] = %v\n", j, numbers[j])
-		fmt.Printf("cities[%d] = %v\n", j, cities[j])
-	}
+	fmt.Println(">>>>>display slice data")
+		
+	
 	// display matrix data
-	fmt.Println(">>>>>display matrix data")
+	fmt.Println(">>>>>display slice 2D data")
 	for i := 0; i < 3; i++ {
 		for j := 0; j < 3; j++ {
-			fmt.Printf("matrix[%d][%d] = %v\n", i, j, matrix[i][j])
+			fmt.Printf("i = %d, j = %d, matrix[%d][%d] = %v\n",i,j,i,j,matrix[i][j])
 		}
 	}
 }
