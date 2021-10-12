@@ -2,13 +2,19 @@ package main
 
 import "fmt"
 
-func add(numbers ...int) int{
-	result:=0
-	for _, number := range numbers{
-		result+=number
+func closure_func(name string){
+	hoo:=func(a, b int){
+		result:=a*b
+		fmt.Printf("hoo() = %d \n", result)
 	}
-	return result
+	joo:=func(a, b int) int {
+		return a*b + a
+	}
+	fmt.Printf("closure_func(%s) was called\n", name)
+	hoo(2, 3)
+	val:=joo(5,8)
+	fmt.Printf("val from joo() = %d\n", val)
 }
 func main(){
-	fmt.Printf("result = %d\n", add(1, 2, 3, 4, 5))
+	closure_func("hoo and joo")
 }
