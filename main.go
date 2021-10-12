@@ -2,19 +2,16 @@ package main
 
 import "fmt"
 
-func closure_func(name string){
-	hoo:=func(a, b int){
-		result:=a*b
-		fmt.Printf("hoo() = %d \n", result)
+
+func fibonacci(n int) int {
+	if n==0 {
+		return 0
+	} else if n==1 {
+		return 1
 	}
-	joo:=func(a, b int) int {
-		return a*b + a
-	}
-	fmt.Printf("closure_func(%s) was called\n", name)
-	hoo(2, 3)
-	val:=joo(5,8)
-	fmt.Printf("val from joo() = %d\n", val)
+	return (fibonacci(n-1) + fibonacci(n-2))
 }
 func main(){
-	closure_func("hoo and joo")
+	result:= fibonacci(10)
+	fmt.Printf("result = %d\n", result)
 }
