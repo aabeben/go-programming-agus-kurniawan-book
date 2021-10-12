@@ -1,40 +1,37 @@
 package main
 
+
 import (
 	"fmt"
 	"math/rand"
 )
 
-func main() {
-	// define slice
-	fmt.Println("define slices")
-	var numbers []int
-	numbers = make([]int, 5)
-	matrix := make([][]int, 3*3)
+func main(){
+	// define map
+	fmt.Println("define map")
+	products:=make(map[string]int)
+	customers:=make(map[string]int)
+
 
 	// insert data
-	fmt.Println(">>>>>insert slice data")
-	for i := 0; i < 5; i++ {
-		     numbers[i] =rand.Intn(100) 
+	fmt.Println(">>>>>insert into products map...")
+	products["product1"] = rand.Intn(100)
+	products["product2"] = rand.Intn(100)
+
+
+
+	// insert into customers map
+	fmt.Println(">>>>>insert into customers map...")
+	customers["customer1"] = rand.Intn(100)
+	customers["customer2"] = rand.Intn(100)
+
+	// display map data
+	fmt.Println(">>>>>display product map data...")
+	for name, value := range products {
+             fmt.Printf("%s => %d\n", name, value)
 	}
-	 
-	
-	
-	for i:=0;i<3;i++{
-		matrix[i] = make([]int,3)
-		for j := 0; j < 3; j++ {
-			matrix[i][j] = rand.Intn(100)
-		}
-	}	
-	// display data
-	fmt.Println(">>>>>display slice data")
-		
-	
-	// display matrix data
-	fmt.Println(">>>>>display slice 2D data")
-	for i := 0; i < 3; i++ {
-		for j := 0; j < 3; j++ {
-			fmt.Printf("i = %d, j = %d, matrix[%d][%d] = %v\n",i,j,i,j,matrix[i][j])
-		}
+	fmt.Println(">>>>display customers map data...")
+	for name, value:=range customers {
+		fmt.Printf("%s => %d\n", name, value)
 	}
 }
