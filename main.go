@@ -1,13 +1,16 @@
-package main
+package main 
 
 import (
 	"fmt"
-	"math/rand"
+	"math"
 )
-func foo(){
-	fmt.Println("foo() was called!")
-	fmt.Println(rand.Intn(100))
+
+
+func circle_area(r float64){
+	area := math.Pi * math.Pow(r, 2)
+	fmt.Printf("Circle area (r=%.2f) = %.2f \n",r, area)
 }
 func main(){
-	foo()
+	var r float64 = 2.5
+	circle_area(r)
 }
